@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url(../fonts/DancingScript-Regular.otf);
+}
+
+body {
+    font-family: 'Dancing Script';
+    background-color: #02010a
+}
+
+#contenido {
+    margin: 0px auto;
+    max-width: 900px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#contenido header{
+    width: 100%;
+}
+
+#central img, #paisaje1, #retrato {
+    box-shadow: 2px 2px 0 #02010a;
+}
+
+header {
+    background-color: #5b7989;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    animation: slidein 2s;
+}
+
+header h1 {
+    text-shadow: 2px 2px 0 #02010a;
+    font-size: 2.2em;
+}
+
+header nav {
+    font-size: 1.3em;
+    margin-top: 40px;
+}
+
+header a {
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+header nav li {
+    display: inline;
+    margin: 5px;
+}
+
+#central {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #d5c75f;
+  border: 1px;
+  padding: 3% 1%;
+  justify-content: center;
+}
+
+.imagenes {
+  text-align: center;
+}
+
+.imagenes div {
+    padding: 2% 1%
+}
+
+.imagenes div img {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.imagenes div:first-child img {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.imagenes div:nth-child(even) img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.imagenes div:nth-child(3) img {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5% 2%;
+    border-radius: 0 0 10px 10px;
+    background-color: #C6d5c5;
+    justify-content: center;
+    align-content: space-around;
+}
+
+footer div {
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer img {
+  height: 15px;
+  width: 15px;
+  padding-right: 5px;
+}
+
+@-webkit-keyframes slidein {
+    0% {
+        margin-top: 150%;
+    }
+    60% {
+        margin-top: -5%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+
+@media all and (min-width: 900px) {
+    #contenido {
+        width: 900px;
+    }
+    header h1 {
+        width: 70%;
+    }
+    header nav {
+        width: 30%;
+    }
+
+    .imagenes div {
+        width: 30%;
+    }
+    footer div {
+        width: 25%;
+    }
+}
+
+@media (max-width: 900px) {
+    #contenido {
+        width: 100%;
+    }
+    header {
+        text-align: center;
+    }
+    header h1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+    header nav {
+      width: 100%;
+      margin-top: 2vw;
+      text-align: center;
+    }
+
+    .imagenes div {
+        width: 100%;
+    }
+    footer div {
+        width: 90%;
+    }
+}
